@@ -1,0 +1,17 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local data and generated images
+rotated_training/
+*.png
+!00.png
+!01.png
+!02.png
+!03.png
+!04.png
+
+# Environment configuration
+.vscode/
+.idea/
+.DS_Store
