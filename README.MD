@@ -21,35 +21,3 @@ A robust, template-based 2D/3D object detection pipeline leveraging OpenCV's `li
 └── 00.png, 01.png...           # Original source images for training and testing
 
 
-1. Generate Augmented Templates
-Place your source object images (00.png, 01.png, etc.) in the root directory. Run the augmentation script to define your Region of Interest (ROI) and generate variations:
-
-Bash
-python rotating_image_training.py
-A window will open showing your first image. Draw a tight bounding box around the target object and press ENTER or SPACE.
-
-The script will cache your ROI selections to saved_roi.json and generate an array of training configurations inside a new rotated_training/ folder.
-
-2. Train and Run the Detector
-Once training data is generated, initialize the LINEMOD template matching system:
-
-Bash
-python linemod_detector.py
-The pipeline will parse your augmented images, verify edge feature density profiles, register templates safely, and execute a multi-threshold scanning pass on your test target image (04.png).
-
-
----
-
-### Step 3: Push the README to GitHub
-
-Now that the file actually exists on your Mac, tell Git to upload it to your repository by running these three commands in your Terminal:
-
-```bash
-# 1. Stage the new README file
-git add README.md
-
-# 2. Commit the change
-git commit -m "Docs: Add professional README documentation"
-
-# 3. Push it to GitHub
-git push origin main
